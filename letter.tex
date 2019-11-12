@@ -1,0 +1,728 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\photo[circle,edge,left]{./img/vLogoWhite.png}
+\name{Vivek}{Menon}
+\position{Software Engineer{\enskip\cdotp\enskip}AI Researcher{\enskip\cdotp\enskip}Technical Lead}
+\address{5 St. Joseph Street, Toronto, Ontario, M4Y 0B6,  Canada}
+
+\homepage{vvkmnn.xyz}
+\mobile{(+1) 416-846-0630}
+\email{mail@vvkmnn.xyz}
+\linkedin{vvkmnn}
+\github{vvkmnn}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@vvkmnn}
+% \skype{skype-id}
+% \reddit{vvkmnn}
+% \medium{vvkmnn}
+% \googlescholar{google scholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+
+
+% %-------------------------------------------------------------------------------
+% %	LETTER INFORMATION
+% %	All of the below lines must be filled out
+% %-------------------------------------------------------------------------------
+% % The company being applied to
+% \recipient
+%   {Company Recruitment Team}
+%   {Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}
+% % The date on the letter, default is the date of compilation
+% \letterdate{\today}
+% % The title of the letter
+% \lettertitle{Job Application for Software Engineer}
+% % How the letter is opened
+% \letteropening{Dear Mr./Ms./Dr. LastName,}
+% % How the letter is closed
+% \letterclosing{Sincerely,}
+% % Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\RequirePackage{amsmath}
+\documentclass[letterpaper]{awesome-cv}
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm}
+
+%% Math Font setup
+\defaultfontfeatures{Scale=MatchLowercase}
+\unimathsetup{partial=upright} % Source Sans Pro contains \partial at U+2202.
+% If you should actually need \mitpartial, \mbfpartial, etc., load them from a
+% math font.  If you want an italic \partial, load from SourceSansPro-It.
+\setmathfont{STIX2Math.otf}
+% Sets math symbols present in Source Sans Pro and that work. You still might
+% not, e.g. want ≥ and ≤ from the text font if ≰ does not match them.
+\setmathfont[range={up,"21,"23-"25,"2A-"2F,"5C,"5E-"5F,"7E,
+                      `¬,`±,`·,`×,`÷,`≤,`≥,`≠,`≈,`∞,`√}
+              ]{SourceSansPro-Regular.otf}
+% Must load separately, or this will prevent autodetection of the upright math
+% alphabet:
+\setmathfont[range=\partial]{SourceSansPro-Regular.otf}
+\setmathfont[range={it}]{SourceSansPro-RegularIt.otf}
+\setmathfont[range={bfup}]{SourceSansPro-Bold.otf}
+\setmathfont[range={bfit}]{SourceSansPro-BoldIt.otf}
+% Greek variant letters Missing from Source Sans Pro:
+\setmathfont[range={\mupalpha, \mupdelta, \mupbeta, \mupsigma, \mupmu, \mupvarepsilon,\mupvarphi,\mupvartheta,\mupvarpi,
+                      \mupvarkappa,\mupvarrho,\mupvarTheta,\nabla,
+                      \mitvarepsilon,\mitvarphi,\mitvartheta,\mitvarpi,
+                      \mitvarkappa,\mitvarrho,\mitvarTheta,\mitnabla,
+                      \mbfvarepsilon,\mbfvarphi,\mbfvartheta,\mbfvarpi,
+                      \mbfvarkappa,\mbfvarrho,\mbfvarTheta,\mbfnabla,
+                      \mbfitvarepsilon,\mbfitvarphi,\mbfitvartheta,
+                      \mbfitvarpi,\mbfitvarkappa,\mbfitvarrho,
+                      \mbfitvarTheta,\mbfitnabla }
+               ]{GFSNeohellenicMath.otf}
+% By default, \mathscr is the same as \mathcal, but several math fonts provde
+% two separate alphabets as variants.
+\setmathfont[range={scr,bfscr},
+               Scale=MatchUppercase,
+               StylisticSet=1
+              ]{STIX2Math.otf}
+
+% Workaround for \operatorname and \mathrm:
+\setmathrm{SourceSansPro}[
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  Ligatures = {Common, TeX },
+  Extension = .otf ]
+\setoperatorfont\mathup
+
+% math commands
+
+% new commands
+\renewcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+
+% new operators
+\DeclareMathOperator{\Gal}{Gal}
+
+%----------------------------------------------------------------------------------------
+%   CODE
+%----------------------------------------------------------------------------------------
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Claud D. Park~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{What are your primary research interests and why do you think they are important}
+
+Introduction: summarizes the contents and guides the reader through your application.
+
+My primary research interest is in solving complex problems using the least AI possible. I believe much academic effort today is directed towards the development of AI under the assumption of optimal computing environments, superfluous resources, and even quantum supremacy. While there is no doubt researching these tools could provide an invaluable opportunity to cheat Moore's Law or access some NP hard problems, it can become increasingly difficult to see how anyone but a company like Google can access AI.
+
+Over my career, I have built AI applications to generally tackle the following problems:
+\begin{itemize}
+\item Predictive Consumer Behavior (Clickstreams, Analytics, Conversion, \ldots{})
+\item Quantitiative Financial Investing (Multiagent, Recurrent, Bayesian, \ldots{})
+\item Data Classification/Regression (Recommender, Linear Approximation, GAN, \ldots{})
+\end{itemize}
+
+What I have consistently discovered is that good AI depends more often on the environment and its inputs than it does on any specific model. With the availability  of tools like Keras and Tensorflow, it has now become possible to trade modular components to intelligent systems, and achieve excellent assistance regarding tuning and fitting.
+
+Where AI has struggled, and where I find the most opporunity for growth, are situations where there is insufficient or sparse data, or the inability to access GPU clusters for redundant training. Models that accomodate for these scenarios, are of a novel interest to me, because they provide strategies that might work simply in suboptimal cases, and scale excellently in optimal ones.
+
+
+
+
+Main paragraph: this is the core of your statement together with the future research. It contains your recent and current research. If you worked on several projects, make the connection among them. Write how you became interested in what you have done and why it is still interesting for you. Capture your reader by telling a story, not just stating what you have done, and your statement will be easy to remember. In this part, you can briefly describe any important recognition, such as papers, presentations, awards and grants.
+
+A very important tip: your statement will be more powerful if you place your work in a broader context. Let your reader visualize the ‘big picture’.
+
+Future prospective: describe your short-term goals (2-5 years). This can be
+different if you are applying for a PhD or post-doc position. In the first case,
+write about additional technical skills you are planning to learn or how you
+want to broaden your knowledge in a certain field. For the second, try to be a
+bit more detailed, and also include how you plan to develop yourself as an
+independent scientist. State how your research goals will align with the
+employer’s research, which collaborations you could bring into the department,
+and which ones on campus you could benefit from.
+
+Conclusion: generally, use one sentence which leaves your imprint and practically says why you deserve the job.
+
+
+
+\lettersection{How would participating in the AI residency help you explore your research interests and acheive your goals}
+
+The reason I began programming was to better understand what people meant by
+the term ``AI''. When I first picked up R the summer after my senior year, arguably much too
+late to accrue any skill, I was under the assumption that only people with a
+Computer Science background could begin to unravel the mysteries of algorithms.
+However, I was fascinated by this new term and the implication that simple
+silicon and electricity could emulate what our brains could do, and could only ever understand
+something by getting my hands dirty, so I had to try.
+
+After moving to Toronto and crashing on my friends couch, I began learning
+Python as means to my first Data Science job. 3 years later I was a Data
+Scientists with experience building solutions in multiple verticals for people
+like Pfizer, Honda, and Apple, and had continued to push my education with
+simultaneous courses at Udacity. Over time, I was beginning to understand the
+realities of Machine Learning, and indeed what a machine was truly capable of. I
+soon discovered that while being an excellent tool, much of its success was
+predicated at least partly on some human knowledge of the domain, or volumes of
+perfectly formatted data that simply were not available in the wild.
+
+It was around this time that I started my first company, alongside two
+cofounders, betting on using a novel multi-agent solution to the portfolio
+selection problem to circumvent costly deep learning methods and provide a
+simple statistical momenta machine for use in markets. In many ways we
+succeeded, building a Google Cloud solution that used microservices and a series
+of Compute severs over Pubsub to artificially generate millions of portfolios
+for multi-agent random selection until a reasonable position was discovered. By
+coupling this with a simple Binance integration, we were able to provide passive
+investing into Cryptocurrencies, which we used to raise \$100K @ 6\% from the
+University of Toronto's CDL accelerator.
+
+This coinceded with the AlphaGo and Deepmind era of Machine Learning, where it was
+discovered that, using heavily modified data input system coupled with the
+ability to artificially self-play with multiple agents, AI was now better
+at playing some of the games my friends and I enjoyed playing. The
+novelty of winning at Go demonstrated these techniques ability to deal with
+enormous probabilities in a rigorous manner, but tools like AlphaStar
+began to genuinely call into question what it even means to be an 'expert'
+anymore.
+
+Our internal AI, while of course no competitor to these, did provide a way to
+profit from this algorithmic advantage, without the dependency on
+backpropogation and tensors. In this way, we could solve a much simpler
+(albeit highly volatile) problem using a much simpler AI, and simply scale where
+possible. Unfortunately, greed became too much of a problem, and we had to to
+stop working with Facebook Libra, and indeed with my other founders.
+
+In many ways, nothing has changed since I started programming. I still am
+obsessed with this new era of Machine Intelligence, and am consistently
+impressed by the power of silicon and electricity. I can see the direct effects
+when I rent out my AI to some hedge funds as a means of exploring the markets, but I'm now
+looking for an opportunity to explore different cutting edge models, like
+AlphaStar, ELF, and Deepmind, while hopefully still maintaining a focus on
+doing the most effecient and intelligent computation with the least resources
+possible. Even though I still may not be qualified, I believe there is simply no
+other way to learn than to try, and I will try as long as it takes to help
+machines become smarter.
+
+
+\lettersection{Example of research:}
+
+\subsubsection{Summary}
+
+Hydra AI is a proprietary machine learning model that attempts to use genetic
+algorithms and statistical price momenta for portfolio selection.
+
+Whereas current deep learning techniques attempt to classify or regress
+individual assets, requiring significant computational resources to scale and
+human intervention to assist in portfolio construction, Hydra attempts to
+generate a simultaneous portfolio of assets from a random vector efficiently,
+given the least information and resources possible.
+
+It is an attempt to build something more ``adversarial'' for the crypto-economic
+and / or logarithmic era of finance; a machine evolved portfolio selection
+engine designed to hunt for alpha across invariant time or price scales.
+
+
+\subsubsection{Problem}
+
+The problem of selecting the optimal portfolio for a given period may be as old
+as finance itself, but the problem can be mathematically formalized as the \textbf{Offline Cardinality Constrained Multi Period Selection Problem}.
+
+We first describe the base problem over \(T\) investment periods, yielding the
+Equation \hyperref[eq:org8bc3e7c]{Multi Period Portfolio Problem} for any agent's multi-period return on an investment. Let us assume that a market (the universe of all available assets) has \(n\) assets with the prices \(p = (p_1 , p_2 , . . . , p_n)\), and let \(w_{i} \geq 0\) be the proportion of capital invested in asset \(i\), as formalized in Equation \ref{eq:org2ff1f05}. To represent a portfolio, the weights (\(w_{1} , w_{2} , . . . , w_{n}\)) must therefore attempt to maximize a return \textbf{R}:
+
+\begin{equation}
+\label{eq:org2ff1f05}
+\begin{aligned}
+& \underset{R}{\mathrm{maximize}}
+& & R = \sum_{i=1}^{n} p_i w_i \\
+& \mathrm{subject to} & &  \sum_{i-1}^{n} w_i =1 \\
+& & & w_i \geq 0 \; \forall i = 1,...,n \\
+& & & p = (p_1 , p_2 , . . . , p_n) \\
+& & & w = (w_1 , w_2 , . . . , w_n) \\
+\end{aligned}
+\end{equation}
+
+To further simplify the problem, we have also added some logical constraints;
+all portfolio weights must add up to \(1\) (\(\sum_{i-1}^{n}w_{i}=1\)), and we
+disallow short selling by removing negative weight positions.
+
+Even with those changes, there are many solutions to this problem; perhaps the most notable is Markowitz's Nobel prize winning proposal:
+
+\begin{equation*}
+\begin{aligned}
+& \underset{\mupsigma_{i,j}}{\mathrm{minimize}}
+& & R = \sum_{i=1}^{n} \sum_{i=1}^{n} w_{i} \mupsigma_{i,j} w_{j} \\
+& \mathrm{subject to}
+& & \sum_{i=1}^{n} w_{i}\mupmu_{i} \geq d \\
+&&& \sum_{i=1}^{n} w_{i}  = 1 \\
+&&& w_{i} \geq 0 \: \forall i = 1,...,n \\
+\end{aligned}
+\end{equation*}
+
+Where \(\mupsigma_{i,j}\) is the covariance between returns of assets \(i\) and \(j\),
+\(\mupmu_{i}\) is the expected return of asset \(i\), and \(d\) is the desired level of
+expected return. This allows a user to tune a portfolio to their risk and return
+preferences, using only stock returns and volatility. In the decades since its
+inception, not the least of which is the fact that one should be able to perfect
+simulate any financial market if they were indeed normally distributed, given
+these two variables.
+
+Thus, by  adding more constraints for realism:
+\begin{itemize}
+\item \textbf{Offline Multiperiod Selection}: Historical data of any asset \(k\) until the
+present day \(t\) (\(p_1 , . . . , p_t\)) is available, but future price data
+(\(p_{t+1}, . . ., p_{t+n}\)) is unknown.
+\item \textbf{Cardinality Constraint}: Limit the number of assets to be held in an efficient portfolio.
+\item \textbf{Quantity Constraint}: Prescribes lower and upper bounds on the fraction of the capital invested in each asset.
+\end{itemize}
+
+We gain the \textbf{\textbf{Limited Asset Markowitz}} model, the current  financial gold
+standard for MV pricing.
+
+\begin{equation*}
+\begin{aligned}
+& \underset{\mupsigma_{i,j}}{\text{minimize}}
+& & R = \sum_{i=1}^{n} \sum_{i=1}^{n} w_{i} \mupsigma_{i,j} w_{j} \\
+& \mathrm{subject to}
+& & \sum_{i=1}^{n} w_{i}\mupmu_{i} \geq d \\
+&&& \mupalpha\mupdelta_{i} \leq w_{i} \leq \mupdelta_{i} \: \forall i = 1,...,n \\
+&&& \sum_{i=1}^{n} \mupdelta_{i}  = k \\
+&&& \sum_{i=1}^{n} w_{i}  = 1 \\
+&&& w_{i} \geq 0 \: \forall i = 1,...,n \\
+&&& \mupdelta_{i}   \: \text{binary} \: \forall i = 1,...,n \\
+\end{aligned}
+\end{equation*}
+
+Where \(\mupsigma_{i,j}\) is still covariance between returns of assets \(i\) and \(j\),
+\(\mupmu_{i}\) is the expected return of aseet \(i\), \(\mupalpha\) and \(\mupbeta\) represent
+the lower and upper thresholds, respectively, of stock weight, \(d\) is the
+desired level of expected return, and \(k\) is the number of assets held in the
+portfolio.
+
+
+
+These requirements come from real-world practice, where the administration of a portfolio made up of a large number of assets, possibly with very small holdings for some of them, is clearly undesirable because of transactions costs, minimum sizes, liquidity, or unnecessary management complexity. We therefore call Limited Asset Markowitz (LAM) model the Markowitz model with the above restrictions.
+
+This can be mathematically formulated by introducing an upper bound on any given \(\mupalpha\), a lower bound \(\mupbeta\), and a binary variable \(\mupdelta{i}\), which decides whether or not an asset \(k\) will be included in the portfolio:
+
+
+Because of its practical relevance, this model (often called cardinality constrained Markowitz model), and some variations thereof, have been fairly intensively studied in the last decade, especially from the computational viewpoint. In these studies it appears that the computational complexity for the solution of the LAM model is much greater than the one required by the classical Markowitz model or by several other of its refinements. Indeed, the standard Markowitz model is routinely solved for markets with thousands of assets. This practical difference in computational complexity is also theoretically justified by the fact that the classical Markowitz model is a convex quadratic programming problem that has a polynomial worst-case complexity bound, while the LAM model is usually modeled by adding binary variables, thus becoming a mixed integer quadratic programming (MIQP) problem, a class of considerably more difficult NP-hard problems.
+
+\subsubsection{Philosophy}
+
+\#\#\# Description
+A Hydra is recursively composed of two parts: A meta AI (Hydra) that selects from random genetic evolutions of a candidate AI (Head), currently tuned to perform some single dimensional / probabilistic prediction. For Lake, the Head we have implemented is a financial investment AI, building upon a multi-agent, cooperative solution tailored to the offline cardinality constrained portfolio selection problem, generally solving it by transforming a chaotic position using statistical momenta descriptors and genetics to transform it into an informed one, using only price over time.
+By generating thousands of these Heads pseudorandomly over thousands of lifetimes, each with randomized internal learning parameters, a conditionally random slice of historical price data, and and other tunable global hyper-parameters, we create a population of statistical distributions from which we select performant candidates from random chaos past an upper bound of confidence until a minimum set of optimal Heads are discovered. We then reduce these Heads into an average position for that point of time, creating the final Hydra and finding the portfolio recommended for a given date; theoretically any arbitrary date, but typically the end of historical prices, or today. We believe this process to be O(nlog(n) * n\textsuperscript{2}) -> O(n\textsuperscript{3}) because we are mapping a memorized random search n times over an n x n vector of prices over time, then reducing.
+
+The candidate AI (Head) is a significantly modified and scaled version of a model proposed and rigorously tested by Kumar and Bhattacharya, 2012, who in turn upgraded a multi-agent cooperative solution built by Parkes \& Huberman, 2001, encoding a computationally efficient portfolio-selection rule discovered by Helmbold et al., 1998. It was designed to compete with the Mean-Variance models of Markowitz, 1959, who won a Nobel prize by proving that a diverse investment portfolio was an effective way to increase long-term return and decrease risk when investing in a stock market. Initial research began at a blockchain hackathon after Vitalik Buterin argued something more adversarial than Markowitz’s mean-variance was necessary for cryptoeconomics, and indeed most financial systems, because of the inherent difficulty in properly correlating the infinite factors of volatility across an increasingly denser space of assets over time, digital or otherwise, and is only ever a snapshot of current or historical risk, not a predictor or future risk (Blockgeeks, 2017). TODO Mandelbrot
+Each Head therefore aims to be a virtual financial investment advisor; a pseudo-investor who is never absent, greedy, emotional, or otherwise irrational, but rather follows a simple quantitative strategy with randomized information consistently across time and price space. The results of each of these investors is tracked, and as better patterns and parameters are discovered they propagate in place of previous worse Heads via genomes, regenerating and feeding constantly on the same set of information randomly in a Darwinian process until a viable subset of candidates survive the induced chaos, and are deemed statistically superior to a lifetime of their competitors. This naturally selected mean strategy make up the Heads of the final Hydra; a probabilistic vector summarizing a high alpha \& risk adjusted position, weighted by asset preference. Here, it stops regenerating, and returns to the user, given risk tolerance and price data, the discovered assets that represent the highest trending return per unit risked for that time.
+Arguably, this does not search all of near infinite price space, especially given Fractal Market Theory, nor always guarantee a safe result that should be immediately actioned upon; which is why the ancillary systems in Lake around Hydra are crucial to optimizing the success in navigating this level of chaos, especially given the additional volatility endemic to cryptographic assets. However, by regenerating at this rate, we hypothesize that Hydra can accrue enough information over enough random lifetimes to notice price inertia and market information at a much finer detail than other / human approaches, the final map-reduced mean of which is generally a safe statistical bet.
+Due to its computational efficiency, it is typical to generate x positions / hour, and take then mean of x number of samples weekly to explore alpha for our customers, and our internal benchmarks can easily cross XM, which currently takes 3 days over a 96 core Debian machines; currently Hydra uses daemon logic to access 3 such machines asynchronously via cloud services.
+By merging a simple stochastic strategy with a scalability and pseudo-randomness that only machines can access, we hope to further explore this field of machine evolution (differential evolution, evolutionary strategies\ldots{}) and grow more informed positions across any market; adapting in the midst of the mild, wild and often abnormally volatile distributions of anything with a price; further specializing at the nexus of finance, blockchain, evolution \& AI.
+
+
+\begin{verbatim}
+def seedHydra(archetype, portfolio):
+    """
+    Convert hydra to genome for snapshot to reseed hydra.
+
+    """
+
+    # Init if None
+    archetype = {} if archetype is None else archetype
+
+    # Skip Keys
+    not_keys = ["generations"]
+
+    # For All Assets
+    all_assets = set([*archetype, *portfolio])
+
+    # Get Average Archetype
+    archetype = {
+        asset: (
+            (archetype[asset] + portfolio[asset]) / 2
+            if asset in archetype and asset in portfolio
+            else (portfolio[asset] if asset in portfolio else archetype[asset])
+        )
+        for asset in all_assets
+    }
+
+    # Get Diversity As Absolute Distance
+    diversity = np.sum(
+        [np.abs(portfolio[asset] - archetype[asset]) for asset in portfolio]
+    )
+
+    # Track Generations
+    archetype["generations"] = (
+        archetype["generations"] + 1 if "generations" in archetype else 1
+    )
+
+    # Return
+    return diversity, archetype
+\end{verbatim}
+
+\begin{verbatim}
+# @jit  # @jit(forceobj=True)
+def updateHeadWeights(head, food):
+    """
+    Updates the learning rates in hydra[head]["learning_rate"]
+
+    Using the Chi Squared updating rule, the idea is to update
+    the weight of an asset proportional to the delta / weighted delta,
+    scaled by the learning rate.
+
+    If the delta is significantly larger than the weighted delta, the asset
+    has overperformed, and must be rebalanced to be given a larger weight. If not,
+    it is has underperformed, and returns a lower weight. The learning rate
+    is generated from a risk averse investor, making it price elastic.
+
+    >>> np.random.seed(1234)
+    >>> head = {}
+    >>> head['portfolio_weights'] = generatePortfolioWeights(10)
+    >>> head['learning_rate']     = generateLearningRate()
+    >>> head['price_relative']    = np.array([2,1,1,1,1,1,1,1,1,1])                  # Black Swan Market [2, 1, ... , 1]   => Buy 0
+    >>> updatePortfolioWeights(head)
+    array([0.10629762, 0.09678675, 0.09825394, 0.10337659, 0.100581  ,
+           0.09356909, 0.1035962 , 0.09424496, 0.10183243, 0.10146142])
+    >>> head['price_relative'] = np.ones(10)/2                                       # Bear Market [0.5, ...]              => No change
+    >>> updatePortfolioWeights(head)
+    array([0.10629764, 0.09678676, 0.09825395, 0.10337659, 0.10058101,
+           0.09356909, 0.1035962 , 0.09424495, 0.10183242, 0.1014614 ])
+    >>> head['price_relative'] = np.ones(10)*2                                       # Bull Market [2, ...]                => No change
+    >>> updatePortfolioWeights(head)
+    array([0.10629766, 0.09678678, 0.09825396, 0.1033766 , 0.10058101,
+           0.09356908, 0.10359619, 0.09424494, 0.1018324 , 0.10146138])
+    >>> head['price_relative'] = np.array([1.1,1.1,1.1,1.1,1.1,0.1,0.1,0.1,0.1,0.1]) # Correlated Market [1.1 , ... , 0.1] => Buy 0:4
+    >>> updatePortfolioWeights(head)
+    array([0.11033065, 0.10040161, 0.10187215, 0.10712997, 0.10417961,
+           0.09004682, 0.09969691, 0.09069806, 0.09800041, 0.09764381])
+    >>> head['price_relative'] = np.random.uniform(0, 10, 10)                        # Hydra Market [?, ...]               => Buy max()
+    >>> updatePortfolioWeights(head)
+    array([0.10834864, 0.10283877, 0.10217985, 0.10542356, 0.10556535,
+           0.08807204, 0.09937953, 0.09244557, 0.09671812, 0.09902857])
+    """
+
+    # Define variables
+    local_assets = head["portfolio_names"]
+    local_weights = head["portfolio_weights"]
+    learning_rate = head["learning_rate"]
+    price_relatives = [
+        food[asset]["price_relative"] if asset in food else 1 for asset in local_assets
+    ]
+
+    # Calculate New Weights
+    new_weights = [
+        local_weight
+        * (
+            learning_rate * (price_relative / np.sum(local_weights * price_relatives))
+            - 1
+        )
+        + 1
+        for local_weight, price_relative in zip(local_weights, price_relatives)
+    ]
+
+    # Update Head
+    head_weights = normalizeWeights(new_weights)
+
+    # Assign
+    head["portfolio_weights"] = head_weights
+
+    # Return Head
+    return head
+\end{verbatim}
+
+\begin{verbatim}
+# @jit  # @jit(forceobj=True)
+def updateHeadWeights(head, food):
+    """
+    Updates the learning rates in hydra[head]["learning_rate"]
+
+    Using the Chi Squared updating rule, the idea is to update
+    the weight of an asset proportional to the delta / weighted delta,
+    scaled by the learning rate.
+
+    If the delta is significantly larger than the weighted delta, the asset
+    has overperformed, and must be rebalanced to be given a larger weight. If not,
+    it is has underperformed, and returns a lower weight. The learning rate
+    is generated from a risk averse investor, making it price elastic.
+
+    >>> np.random.seed(1234)
+    >>> head = {}
+    >>> head['portfolio_weights'] = generatePortfolioWeights(10)
+    >>> head['learning_rate']     = generateLearningRate()
+    >>> head['price_relative']    = np.array([2,1,1,1,1,1,1,1,1,1])                  # Black Swan Market [2, 1, ... , 1]   => Buy 0
+    >>> updatePortfolioWeights(head)
+    array([0.10629762, 0.09678675, 0.09825394, 0.10337659, 0.100581  ,
+           0.09356909, 0.1035962 , 0.09424496, 0.10183243, 0.10146142])
+    >>> head['price_relative'] = np.ones(10)/2                                       # Bear Market [0.5, ...]              => No change
+    >>> updatePortfolioWeights(head)
+    array([0.10629764, 0.09678676, 0.09825395, 0.10337659, 0.10058101,
+           0.09356909, 0.1035962 , 0.09424495, 0.10183242, 0.1014614 ])
+    >>> head['price_relative'] = np.ones(10)*2                                       # Bull Market [2, ...]                => No change
+    >>> updatePortfolioWeights(head)
+    array([0.10629766, 0.09678678, 0.09825396, 0.1033766 , 0.10058101,
+           0.09356908, 0.10359619, 0.09424494, 0.1018324 , 0.10146138])
+    >>> head['price_relative'] = np.array([1.1,1.1,1.1,1.1,1.1,0.1,0.1,0.1,0.1,0.1]) # Correlated Market [1.1 , ... , 0.1] => Buy 0:4
+    >>> updatePortfolioWeights(head)
+    array([0.11033065, 0.10040161, 0.10187215, 0.10712997, 0.10417961,
+           0.09004682, 0.09969691, 0.09069806, 0.09800041, 0.09764381])
+    >>> head['price_relative'] = np.random.uniform(0, 10, 10)                        # Hydra Market [?, ...]               => Buy max()
+    >>> updatePortfolioWeights(head)
+    array([0.10834864, 0.10283877, 0.10217985, 0.10542356, 0.10556535,
+           0.08807204, 0.09937953, 0.09244557, 0.09671812, 0.09902857])
+    """
+
+    # Define variables
+    local_assets = head["portfolio_names"]
+    local_weights = head["portfolio_weights"]
+    learning_rate = head["learning_rate"]
+    price_relatives = [
+        food[asset]["price_relative"] if asset in food else 1 for asset in local_assets
+    ]
+
+    # Calculate New Weights
+    new_weights = [
+        local_weight
+        * (
+            learning_rate * (price_relative / np.sum(local_weights * price_relatives))
+            - 1
+        )
+        + 1
+        for local_weight, price_relative in zip(local_weights, price_relatives)
+    ]
+
+    # Update Head
+    head_weights = normalizeWeights(new_weights)
+
+    # Assign
+    head["portfolio_weights"] = head_weights
+
+    # Return Head
+    return head
+\end{verbatim}
+
+\begin{lstlisting}[language=Python, caption=Python example]
+def mapHydra():
+    """
+    Benchmarks the Hydra against a dataset, where tries to eat it from day 0 in slices.
+    """
+
+    # Eat
+    data = getInput(dataset)  ## Initialize
+
+    # Split
+    date_time, raw_data = prepareData(data)
+
+    # Timer
+    exec_time = time.time()
+
+    ## Arguments
+    splits, map_args, map_start_row, start_date, map_end_row, end_date = mapArguments(
+        raw_data, date_time
+    )
+
+    # Logo
+    screen_height, screen_width = logoHydra()
+
+    ## Map
+    results = pm.starmap(
+        metaHydra,
+        map_args,
+        raw_data,
+        exec_time=exec_time,
+        required_best=best,
+        asset_count=asset_count,
+        z_score=z_score,
+        pm_processes=processes,
+        pm_parallel=parallel,
+        pm_chunksize=1,
+        pm_pbar=not verbose,
+    )
+
+    # Parse
+    portfolios, favorites, sample_hydra, z_scores = (
+        [r[0] for r in results],
+        [r[1] for r in results],
+        [r[2] for r in results],
+        [r[3] for r in results],
+    )
+
+    # Reduce
+    meta_portfolio, total_hydra, mean_z_score = reduceResults(
+        portfolios, favorites, sample_hydra, z_scores
+    )
+
+    ## Save Complete
+    saved = (
+        saveOutput(
+            meta_portfolio,
+            portfolios,
+            splits,
+            start_date,
+            end_date,
+            asset_count,
+            map_end_row,
+            total_hydra,
+            mean_z_score,
+            exec_time,
+            exec_time,
+            complete=True,
+            source=save,
+        )
+        if mode == "predict"
+        else None
+    )
+
+    # Log
+    print("\n[@lake/hydra] map result >> \n")
+    pprint(
+        list(zip([map_arg[4] for map_arg in map_args], portfolios))
+        if mode == "benchmark"
+        else (meta_portfolio if mode == "predict" else None)
+    )
+
+    # Return
+    return meta_portfolio, portfolios, favorites
+
+\end{lstlisting}
+
+
+\subsubsection{Solution}
+
+\begin{enumerate}
+\item Features
+\begin{enumerate}
+\item \textbf{\textbf{Simple}}: Python 3.7 with 3 dependencies
+\item \textbf{\textbf{Functional}}: Lazily loadable, impure functions with explicit side effects, typing, and NumPy optimizations for Cython / C performance where available
+\item \textbf{\textbf{Parallelized}}: Thread-pooled *map implementation with unary flags for multithreaded, parallel map reduce
+\item \textbf{\textbf{Parametrized}}: Tunabl*e, tractable Hyperparameters including asset count, risk tolerance \& sample size
+\item \textbf{\textbf{Async}}: Daemon logic for naive server-client setups on cloud / local machines; coordinating via PubSub and cron triggers for automated prediction across geographies or server providers
+\item \textbf{\textbf{Adversarial}}: Core strategy chosen for an academic history of strong competitiveness with standard industry techniques (Mean-Variance models), before modifications to generate 10x-100x more samples than any reference variant
+\item \textbf{\textbf{Cheap}}: Ingests only historical price time series, arbitrarily analyzing properties therein given little tuning
+\item \textbf{\textbf{Fast}}: CPU scalable by updating probabilistic single-dimension Dirichlet vectors via arithmetic instead of transforming multi-dimensional tensors via Hessian matrices (and GPUs)
+\item \textbf{\textbf{Minimal}}: Additional memoized data structures via nested dictionaries \& global dataframes to reuse memory where possible
+\item \textbf{\textbf{Dropout}}: Information deletion mechanics to prevent overfitting while encouraging chaos
+\item \textbf{\textbf{Natural Selection}}: Population sampling alongside crossover to select upper bound genomes only
+\item \textbf{\textbf{Random Search}}: Randomized lower level parameters to explore price space in a nonlinear way
+\item \textbf{\textbf{Novelty Search}}: Genetic algorithms that propagate parts of both the best and most diverse strategies
+\end{enumerate}
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+% \makeletterclosing
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
