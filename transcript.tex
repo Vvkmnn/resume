@@ -1,0 +1,295 @@
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\photo[circle,edge,left]{./img/vLogoWhite.png}
+\name{Vivek}{Menon}
+\position{Software Engineer{\enskip\cdotp\enskip}AI Researcher{\enskip\cdotp\enskip}Technical Lead}
+\address{5 St. Joseph Street, Toronto, Ontario, M4Y 0B6,  Canada}
+
+\homepage{vvkmnn.xyz}
+\mobile{(+1) 416-846-0630}
+\email{mail@vvkmnn.xyz}
+\linkedin{vvkmnn}
+\github{vvkmnn}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@vvkmnn}
+% \skype{skype-id}
+% \reddit{vvkmnn}
+% \medium{vvkmnn}
+% \googlescholar{google scholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+
+
+% %-------------------------------------------------------------------------------
+% %	LETTER INFORMATION
+% %	All of the below lines must be filled out
+% %-------------------------------------------------------------------------------
+% % The company being applied to
+% \recipient
+%   {Company Recruitment Team}
+%   {Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}
+% % The date on the letter, default is the date of compilation
+% \letterdate{\today}
+% % The title of the letter
+% \lettertitle{Job Application for Software Engineer}
+% % How the letter is opened
+% \letteropening{Dear Mr./Ms./Dr. LastName,}
+% % How the letter is closed
+% \letterclosing{Sincerely,}
+% % Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\RequirePackage{amsmath}
+\documentclass[letterpaper]{awesome-cv}
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm}
+
+%% Math Font setup
+\defaultfontfeatures{Scale=MatchLowercase}
+\unimathsetup{partial=upright} % Source Sans Pro contains \partial at U+2202.
+% If you should actually need \mitpartial, \mbfpartial, etc., load them from a
+% math font.  If you want an italic \partial, load from SourceSansPro-It.
+\setmathfont{STIX2Math.otf}
+% Sets math symbols present in Source Sans Pro and that work. You still might
+% not, e.g. want ≥ and ≤ from the text font if ≰ does not match them.
+\setmathfont[range={up,"21,"23-"25,"2A-"2F,"5C,"5E-"5F,"7E,
+                      `¬,`±,`·,`×,`÷,`≤,`≥,`≠,`≈,`∞,`√}
+              ]{SourceSansPro-Regular.otf}
+% Must load separately, or this will prevent autodetection of the upright math
+% alphabet:
+\setmathfont[range=\partial]{SourceSansPro-Regular.otf}
+\setmathfont[range={it}]{SourceSansPro-RegularIt.otf}
+\setmathfont[range={bfup}]{SourceSansPro-Bold.otf}
+\setmathfont[range={bfit}]{SourceSansPro-BoldIt.otf}
+% Greek variant letters Missing from Source Sans Pro:
+\setmathfont[range={\mupalpha, \mupdelta, \mupbeta, \mupsigma, \mupmu, \mupvarepsilon,\mupvarphi,\mupvartheta,\mupvarpi,
+                      \mupvarkappa,\mupvarrho,\mupvarTheta,\nabla,
+                      \mitvarepsilon,\mitvarphi,\mitvartheta,\mitvarpi,
+                      \mitvarkappa,\mitvarrho,\mitvarTheta,\mitnabla,
+                      \mbfvarepsilon,\mbfvarphi,\mbfvartheta,\mbfvarpi,
+                      \mbfvarkappa,\mbfvarrho,\mbfvarTheta,\mbfnabla,
+                      \mbfitvarepsilon,\mbfitvarphi,\mbfitvartheta,
+                      \mbfitvarpi,\mbfitvarkappa,\mbfitvarrho,
+                      \mbfitvarTheta,\mbfitnabla }
+               ]{GFSNeohellenicMath.otf}
+% By default, \mathscr is the same as \mathcal, but several math fonts provde
+% two separate alphabets as variants.
+\setmathfont[range={scr,bfscr},
+               Scale=MatchUppercase,
+               StylisticSet=1
+              ]{STIX2Math.otf}
+
+% Workaround for \operatorname and \mathrm:
+\setmathrm{SourceSansPro}[
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  Ligatures = {Common, TeX },
+  Extension = .otf ]
+\setoperatorfont\mathup
+
+% math commands
+
+% new commands
+\renewcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+
+% new operators
+\DeclareMathOperator{\Gal}{Gal}
+
+%----------------------------------------------------------------------------------------
+%   CODE
+%----------------------------------------------------------------------------------------
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Claud D. Park~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{Transcript}
+\usepackage{tabularx}
+\begin{tabularx}{\linewidth}{ r|Xccc }
+\Large Course & \Large  Name & \Large Session & \Large  Grade & \Large Credits \\
+\hline
+\newline
+ & & & & \\
+\textit{COMM 477} & \large Risk Management and Financial Engineering  &  2014 & B & 3.0 \\
+\textit{COMM 365} & \large Market Research  &  2014 & B & 3.0 \\
+\textit{ECON 374} & \large Land Economics &  2013 & C & 3.0 \\
+\textit{COMM 468} & \large Marketing Applications &  2013 & B & 3.0 \\
+\textit{COMM 464} & \large E-Marketing &  2013 & B & 3.0 \\
+\textit{COMM 377} & \large International Financial Markets and Institutions &  2013 & B & 3.0 \\
+
+\textit{ECON 320} & \large Introduction to Mathematical Economics &  2013 & C & 3.0 \\
+\textit{COMM 491} & \large Strategic Management &  2013 & B & 3.0 \\
+\textit{COMM 399} & \large Logistics and Operations Management &  2013 & C & 3.0 \\
+
+\textit{COMM 362} & \large Buyer Behavior  &  2013 & B & 3.0 \\
+\textit{COMM 363} & \large Marketing Analysis  &  2013 & B & 3.0 \\
+\textit{COMM 374} & \large Applied Financial Markets  &  2013 & C & 3.0 \\
+\textit{COMM 390} & \large Business Writing  &  2013 & B & 3.0 \\
+\textit{ECON 351} & \large Women in the Economy  &  2013 & B & 3.0 \\
+\textit{COMM 371} & \large Corporate Finance  &  2012 & B & 3.0 \\
+\textit{COMM 371} & \large Investment Theory &  2012 & C & 3.0 \\
+\textit{COMM 370} & \large Commercial Law  &  2012 & B & 3.0 \\
+
+
+\textit{ECON 339} & \large Economics of Technological Change  &  2012 & B & 3.0 \\
+
+\textit{ECON 345} & \large Money and Banking  &  2012 & C & 3.0 \\
+\textit{ECON 326} & \large Methods of Emperical Research  &  2012 & B & 3.0 \\
+\textit{COMM 298} & \large Introduction to Finance  &  2012 & A & 3.0 \\
+ \textit{COMM 291} & \large Applications of Statistics in Business  &  2012 & B & 3.0 \\
+\textit{ECON 356} & \large Introduction to International Finance  &  2012 & B & 3.0 \\
+\textit{COMM 296} & \large Introduction to Marketing  &  2011 & C & 3.0 \\
+\textit{COMM 295} & \large Managerial Economics  &  2011 & C & 3.0 \\
+\textit{COMM 290} & \large Introduction to Quantitative Decision Making  &  2011 & B & 3.0 \\
+
+\textit{ECON 355} & \large Introduction to International Trade  &  2011 & B & 3.0 \\
+\textit{ECON 325} & \large Introduction to Emperical Economics  &  2011 & C & 3.0 \\
+\textit{ECON 325} & \large Managing the Employment Relationship  &  2011 & B & 3.0 \\
+ \textit{COMM 391} & \large Introduction to Management Information Systems  &  2011 & C & 3.0 \\
+\textit{ECON 351} & \large Women in the Economy &  2012 & CR & 3.0 \\
+
+
+ \textit{MATH 105} & \large Integral Calculus with Applications to Commerce & 2011 & B & 3.0\\
+\textit{COMM 391} & \large Introduction to Management Information Systems  &  2010 & C & 3.0 \\
+\textit{COMM 294} & \large Managerial Accounting  &  2010 & B & 3.0 \\
+
+\textit{COMM 293} & \large Financial Accounting  &  2010 & D & 3.0 \\
+
+\textit{PHIL 102} & \large Introduction to Philosophy II  & 2010 & C & 3.0 \\
+\textit{PHIL 125} & \large Introduction to Scientific Reasoning & 2010 & B & 3.0 \\
+\textit{ECON 102} & \large Principles of Macroeconomics  &  2010 & C & 3.0 \\
+\textit{COMM 486G} & \large Business Fundamentals (Pilot Course) &  2010 & CR & 3.0 \\
+\textit{COMM 299} & \large Business Communications &  2009 & A & 3.0 \\
+\textit{MATH 104} & \large Differential Calculus with Applications to Commerce & 2009 & A & 3.0 \\
+\textit{ECON 101} & \large Principles of Microeconomics & 2009 & B & 3.0 \\
+\textit{ENGL 112} & \large Strategies of University Writing & 2009 & B & 3.0 \\
+\textit{COMM 292} & \large Management and Organizational Behavior  &  2009 & B & 3.0 \\
+
+
+\end{tabularx}
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+% \makeletterclosing
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
