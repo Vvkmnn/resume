@@ -195,7 +195,7 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -688,15 +688,16 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-	\vspace{\acvSectionContentTopSkip}
-	\vspace{-2.0mm}
+	% \vspace{\acvSectionContentTopSkip}
+	\vspace{-3.0mm}
 	\begin{center}
 		\setlength\tabcolsep{1ex}
 		\setlength{\extrarowheight}{0pt}
-		\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+		\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.88}}}
 			}{%
 		\end{tabular*}
 	\end{center}
+	\vspace{-7.0mm}
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}

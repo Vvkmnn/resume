@@ -1,0 +1,64 @@
+// Description {{{
+
+Hey,
+
+I have a friend who is a...
+
+// Background
+* Technical lead with 5+ years of experience solving business problems using AI. 
+* Self-taught Data Scientist with experience implementing data solutions for
+  Apple, Adidas, Acura, and others
+* Ex-CTO that transitioned a 3 person team into a 11+ blockchain team through
+  bootstrapping and consulting, & $100K in open-source grants
+* Raised $100K at $1.6M from UoT's CDL to research a proprietary patent-pending AI using
+  genetic algorithsm and probabilistic programming.
+
+// Goal
+* Post startup exit, he's now interested in understanding the VC/raising/<insert
+  field>world and serial entrepreneurship
+* He's highly technical, but he want experience n more verticals, to really
+  understand the business implications of AI, and how it can do the most damage
+* Good at leading teams, but after build one from scratch is eager to learn
+  from some experts and see how one avoids common pitfalls
+* Great with the startup and consulting grind. Should be an asset in most
+  teams, bust is looking for something interesting
+
+// Flavor text:
+* Jammed togther at the Blockgeeks Ethereum Hackathon 2017; liked to code
+* Fan of functional programming, cryptoeconomics, Bayesian stats, and a ton of
+  other nerd shit
+* Got a cute cat
+
+// }}}
+
+// Opportunities {{{
+
+So he is looking for an opportuniy to be...
+
+<technical>
+* A Data Lead / Data Scientist on an established team, either using new
+  probabilistic programming techniques or traditional deep learning ones
+* A Software Developer / DevOps / Data guy on a seasoned team with an amazing
+  objective
+* An AI or Blockchain researcher to explore niche problems that require bespoke
+  solutions
+
+<finance>
+* In an analytical role at a discretionary or macro fund, with
+  experience leveraging quantitative techniques
+* Partner with capital around a proprietary AI technique that has shown to outperform
+  BTC via parameterizerable index fund style positions, and scales easily to stocks
+* Direct exposure to an experienced hedge fund manager, interested in applying
+  the latest technology to their strategies
+
+<venture capital>
+* An analytical role at a venture fund, specifically leading the exploration of
+  high tech domains
+* Be a talent source for cross-team development and Data science
+* Consulting Data Scientist for macro or micro scale analysis of company
+  performance 
+
+<general> 
+* Join a sick team doing amazing work 
+
+// }}}
